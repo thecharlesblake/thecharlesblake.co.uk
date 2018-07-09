@@ -3,7 +3,7 @@ name: Charlie Blake
 bio: Software developer and occasional comedian
 
 # twitter summary info
-description: Somewhere to post stuff relevant to me.
+description: Somewhere to post my projects and anything else relevant.
 
 # if it's an external image, update below for true
 # better with square images
@@ -17,16 +17,8 @@ resume-external: true
 resume-url: https://google.com/?q=my+resume
 
 url: https://thecharlesblake.co.uk
-# your url: http://USERNAME.github.io
 
 permalink: /:title/
-
-# To enable google analytics, supply your token below
-# analytics-google: 'UA-MYANALYTICS'
-
-# To enable piwik tracking, supply your url & site ID below
-# analytics-piwik-url: 'piwik.my-host.com'
-# analytics-piwik-id: 1
 
 # if you don't want comments in your posts, leave categories empty
 disqus:
@@ -35,11 +27,11 @@ disqus:
 
 # if you don't have any of social below, comment the line
 facebook: myfacebook
-twitter: mytwitter
+#twitter: mytwitter
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
-# linkedin: mylinkedin
+linkedin: mylinkedin
 # youtube: myyoutube
 # spotify: myspotify
 github: mygithub
@@ -48,10 +40,10 @@ github: mygithub
 # stackoverflow: 7044681/mystackoverflow
 # quora: userquora
 # reddit: username
-medium: medium
+# medium: medium
 # vimeo: myvimeo
 # lanyrd: mylanyrd
-email: myemail@gmail.com
+email: thecharlesblake@live.co.uk
 
 authors:
     johndoe:
@@ -59,12 +51,6 @@ authors:
         bio: Software developer and occasional comedian
         external-image: false
         picture: assets/images/profile.jpg
-    jamesfoster:
-        name: James Foster
-        bio: A Man who develops software with coffee
-        external-image: false
-        picture: assets/images/james.jpg
-        twitter: jamesfoster
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
