@@ -2,8 +2,8 @@
 title: "Blake's Chess"
 layout: post
 date: 2018-07-08 12:48
-image: /assets/images/markdown.jpg
-headerImage: false
+image: /assets/images/chess.png
+headerImage: true
 tag:
 - chess
 - cards
@@ -14,6 +14,27 @@ author: thecharlesblake
 description: A new chess variant using dice and playing cards
 # jemoji: '<img class="emoji" title=":ramen:" alt=":ramen:" src="https://assets.github.com/images/icons/emoji/unicode/1f35c.png" height="20" width="20" align="absmiddle">'
 ---
+
+The following is a set of rules for a game I have invented, which I'm
+provisionally calling _Blake's Chess_ (where's the fun in being a narcissist if
+you don't get to name things after yourself?). This variant is inspired by the
+idea of turning chess into an imperfect-information game, where probability and
+chance are introduced.
+
+The game is really a variant of chess with the attacking dynamics of _Risk_,
+and a set of _effect cards_ as found in many popular board games,
+but based on poker hands formed by playing cards.
+
+Many chess variants [already exist][1], and are widely played. Additionally, some of
+these mechanics have been experimented with before in relation to chess (see
+[Knightmare Chess][4], [Fantasy Chess][3], and [ChessHeads][2]).
+However, _Blake's Chess_ is quite distinct from these other games and is unlike
+anything I'm currently aware of.
+
+The game is still a work-in-progress. Please forgive any warped game mechanics.
+Feedback is always appreciated :smiley:
+
+<div class="breaker"></div>
 
 ## Requirements
 - A chess set
@@ -28,10 +49,10 @@ description: A new chess variant using dice and playing cards
 - Shuffle the deck and place it face down (the _stock_ pile)
 - All regular chess moves apply except:
   - There is no such thing as _check_. To win, one must capture the opposing king
-  - When a piece goes to capture another piece, they must roll to determine whether the capture is successful (see [Capturing](#Capturing))
+  - When a piece goes to capture another piece, they must roll to determine whether the capture is successful (see [Capturing](#capturing))
 - For the first 3 turns, only regular moves and captures can be made
-- After this, a player may instead draw a card (see [Drawing](#Drawing))
-- A player may only play cards on their turn, and before their move (see [Playing Cards](#Playing Cards))
+- After this, a player may instead draw a card (see [Drawing](#drawing))
+- A player may only play cards on their turn, and before their move (see [Playing Cards](#playing-cards))
 
 ## Capturing
 
@@ -47,7 +68,7 @@ For a defending player, their _defence_ is the sum of their roll, and their _pie
 - __Queens:__ 4
 - __Kings:__ 5
 
-Whichever player's total is higher captures their opponent's piece. Successful attacking pieces move onto the defender's square, whereas successful defending pieces remain in place. In the event of a draw, both pieces remain in place and the turn ends.
+Whichever player's total is higher captures their opponent's piece. Successful attacking pieces move onto the defender's square, whereas successful defending pieces remain in place. In the event of a draw, no capture takes place. Both pieces remain in place and the turn ends.
 
 ## Drawing
 
@@ -69,12 +90,12 @@ Note that a card may be played on the same turn it is drawn. Played cards or gro
 - __2 pair:__ +1 to any roll
 - __3 of a kind:__ +2 to any roll
 - __4 of a kind:__ +3 to any roll
-- __3 card straight:__ Build first knight / bishop / rook (see [Building Peices](#Building Pieces))
-- __4 card straight:__ Build the queen
-- __5 card straight:__ Build all remaining pieces at once
-- __3 card flush:__  Build second knight / bishop / rook
-- __4 card flush:__ Build the queen
-- __5 card flush:__ Select any opposing piece (excluding the king) to be removed from play
+- __3 card straight:__ Builds the first knight / bishop / rook (see [Building Peices](#building-pieces))
+- __4 card straight:__ Builds the queen
+- __5 card straight:__ Builds all remaining pieces at once
+- __3 card flush:__  Builds the second knight / bishop / rook
+- __4 card flush:__ Builds the queen
+- __5 card flush:__ Selects any opposing piece (excluding the king) to be removed from play
 - __Kings:__ Blocks an attack on the king
 - __Queens:__ Blocks an attack on the queen
 - __Jacks:__ Blocks an attack on any other piece
@@ -82,18 +103,47 @@ Note that a card may be played on the same turn it is drawn. Played cards or gro
 Note that all cards which add to rolled values are to be played _after_ the dice has been rolled.
 
 ### Trump Cards
-A: swap two opponent pieces (excluding king) and end turn,
-2: move through one of your own pieces
-3: double-agent-pawn: take-over an enemy pawn for a turn (attacks in your direction of movement)
-4: board-wrap,
-5: teleport any piece and end your turn,
-6: sniper (can't die one's-self),
-7: double-move,
-8: bodyguard: swap a piece that is about to die with a pawn to take its place (excluding king)
-9: two pieces attack at once (combine attack bonus, choose a piece to move in/die)
-10: kamikaze (+2 attack bonus),
-J: bishop converts (if possible),
-Q: lowest attack wins (except for kings),
-K: revive one of your dead pieces
+
+These card ranks refer to the cards in the deck whose suit matches the card
+selected as the _trump_ card at the beginning of the game.
+
+- __A (misdirection):__ Swaps two of your opponent's pieces (excluding the king)
+- __2 (invisibility):__ Enables you to move a piece through other pieces of your own, as though they
+  were not there, as long as the move would otherwise be valid and no two pieces
+  finish on the same square
+- __3 (brainwashing):__ Takes-over an enemy pawn for a turn. It moves and attacks in your own
+  direction of play
+- __4 (secret passageway):__ Allows moves to wrap width-wise, such that a piece may
+  make a legal move out the left side of the board and finish on the right (or
+  vice-versa)
+- __5 (teleportation):__ Moves one of your pieces (excluding pawns) to any other empty square and ends your turn
+- __6 (sniper):__ An attack on an opposing piece, does not move to their square if
+  successful. The attacking piece is also not captured if unsuccessful
+- __7 (agility):__ Allows two moves/captures/draws on this turn
+- __8 (bodyguard):__ Swaps a piece that is about to die (excluding the king) with any other piece to take its place
+- __9 (tag-team):__ Two pieces may attack at once, combining their piece strength. One piece is
+selected beforehand to move to the target square if successful. Both attacking pieces are captured if
+unsuccessful
+- __10 (kamikaze):__ Grants a piece an extra 2 points for an attack, but the
+  piece is automatically captured whether it wins or loses
+- __J (conversion):__ A bishop that successfully captures a piece which you have
+  either lost or not yet acquired, instead converts that piece into one of your
+  own
+- __Q (uprising):__ Swaps the piece strength of the attacking and defending
+  pieces (excluding defending kings)
+- __K (necromancy):__ Revives one of your dead pieces
 
 ## Building Pieces
+
+There is an order in which pieces must be built. Firstly, a rook, a knight and a
+bishop must be built (in any order). After these three have been completed, a
+queen must be built. Finally the second rook, knight, and bishop must be built
+(again, in any order).
+
+Pieces may only be built if they have not been built before. Captured pieces may
+not be rebuilt.
+
+[1]: https://en.wikipedia.org/wiki/List_of_chess_variants
+[2]: https://www.boardgamegeek.com/boardgame/12932/chessheads
+[3]: http://www.shadowhex.com/
+[4]: https://en.wikipedia.org/wiki/Knightmare_Chess
