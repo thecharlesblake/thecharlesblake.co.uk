@@ -1,118 +1,66 @@
-# Hyde
+<p align="center">
+    <h2 align="center">Indigo Minimalist Jekyll Template - <a href="http://sergiokopplin.github.io/indigo/">Demo</a> · <a href="https://travis-ci.org/sergiokopplin/indigo"><img src="https://camo.githubusercontent.com/5393485b732749b3499264168fa8af60166071e8/68747470733a2f2f7472617669732d63692e6f72672f73657267696f6b6f70706c696e2f696e6469676f2e7376673f6272616e63683d67682d7061676573" alt="Build Status" data-canonical-src="https://travis-ci.org/sergiokopplin/indigo.svg?branch=gh-pages" style="max-width:100%;"></a></h2>
+</p>
 
-Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+<p align="center">This is a simple and minimalist template for Jekyll for those who likes to eat noodles.</p>
 
-![Hyde screenshot](https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png)
+***
 
+<p align="center">
+    <b><a href="README.md#what-has-inside">What has inside</a></b>
+    |
+    <b><a href="README.md#setup">Setup</a></b>
+    |
+    <b><a href="README.md#settings">Settings</a></b>
+    |
+    <b><a href="README.md#how-to">How to</a></b>
+</p>
 
-## Contents
+<p align="center">
+    <img src="https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/assets/screen-shot.png" />
+</p>
 
-- [Usage](#usage)
-- [Options](#options)
-  - [Sidebar menu](#sidebar-menu)
-  - [Sticky sidebar content](#sticky-sidebar-content)
-  - [Themes](#themes)
-  - [Reverse layout](#reverse-layout)
-- [Development](#development)
-- [Author](#author)
-- [License](#license)
+## What has inside
 
+- [Jekyll](https://jekyllrb.com/), [Sass](http://sass-lang.com/) ~[RSCSS](http://rscss.io/)~ and [SVG](https://www.w3.org/Graphics/SVG/)
+- Tests with [Travis](https://travis-ci.org/)
+- Google Speed: [98/100](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsergiokopplin.github.io%2Findigo%2F);
+- No JS. :sunglasses:
 
-## Usage
+## Setup
 
-Hyde is a theme built on top of [Poole](https://github.com/poole/poole), which provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
+0. :star: to the project. :metal:
+2. Fork the project [Indigo](https://github.com/sergiokopplin/indigo/fork)
+3. Edit `_config.yml` with your data (check <a href="README.md#settings">settings</a> section)
+4. Write some posts :bowtie:
 
+If you want to test locally on your machine, do the following steps also:
 
-## Options
+1. Install [Jekyll](http://jekyllrb.com), [NodeJS](https://nodejs.org/) and [Bundler](http://bundler.io/).
+2. Clone the forked repo on your machine
+3. Enter the cloned folder via terminal and run `bundle install`
+4. Then run `bundle exec jekyll serve --config _config.yml,_config-dev.yml`
+5. Open it in your browser: `http://localhost:4000`
+6. Test your app with `bundle exec htmlproofer ./_site`
+7. Do you want to use the [jekyll-admin](https://jekyll.github.io/jekyll-admin/) plugin to edit your posts? Go to the admin panel: `http://localhost:4000/admin`. The admin panel will not work on GitHub Pages, [only locally](https://github.com/jekyll/jekyll-admin/issues/341#issuecomment-292739469).
 
-Hyde includes some customizable options, typically applied via classes on the `<body>` element.
+## Settings
 
-
-### Sidebar menu
-
-Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's [front-matter](http://jekyllrb.com/docs/frontmatter/).
+You must fill some informations on `_config.yml` to customize your site.
 
 ```
+name: John Doe
+bio: 'A Man who travels the world eating noodles'
+picture: 'assets/images/profile.jpg'
+...
+
+and lot of other options, like width, projects, pages, read-time, tags, related posts, animations, multiple-authors, etc.
+```
+
+## How To?
+
+Check the [FAQ](./FAQ.md) if you have any doubt or problem.
+
 ---
-layout: page
-title: About
----
-```
 
-**Why require a specific layout?** Jekyll will return *all* pages, including the `atom.xml`, and with an alphabetical sort order. To ensure the first link is *Home*, we exclude the `index.html` page from this list by specifying the `page` layout.
-
-
-### Sticky sidebar content
-
-By default Hyde ships with a sidebar that affixes it's content to the bottom of the sidebar. You can optionally disable this by removing the `.sidebar-sticky` class from the sidebar's `.container`. Sidebar content will then normally flow from top to bottom.
-
-```html
-<!-- Default sidebar -->
-<div class="sidebar">
-  <div class="container sidebar-sticky">
-    ...
-  </div>
-</div>
-
-<!-- Modified sidebar -->
-<div class="sidebar">
-  <div class="container">
-    ...
-  </div>
-</div>
-```
-
-
-### Themes
-
-Hyde ships with eight optional themes based on the [base16 color scheme](https://github.com/chriskempson/base16). Apply a theme to change the color scheme (mostly applies to sidebar and links).
-
-![Hyde in red](https://f.cloud.github.com/assets/98681/1831229/42b0b354-7384-11e3-8462-31b8df193fe5.png)
-
-There are eight themes available at this time.
-
-![Hyde theme classes](https://f.cloud.github.com/assets/98681/1817044/e5b0ec06-6f68-11e3-83d7-acd1942797a1.png)
-
-To use a theme, add anyone of the available theme classes to the `<body>` element in the `default.html` layout, like so:
-
-```html
-<body class="theme-base-08">
-  ...
-</body>
-```
-
-To create your own theme, look to the Themes section of [included CSS file](https://github.com/poole/hyde/blob/master/public/css/hyde.css). Copy any existing theme (they're only a few lines of CSS), rename it, and change the provided colors.
-
-### Reverse layout
-
-![Hyde with reverse layout](https://f.cloud.github.com/assets/98681/1831230/42b0d3ac-7384-11e3-8d54-2065afd03f9e.png)
-
-Hyde's page orientation can be reversed with a single class.
-
-```html
-<body class="layout-reverse">
-  ...
-</body>
-```
-
-
-## Development
-
-Hyde has two branches, but only one is used for active development.
-
-- `master` for development.  **All pull requests should be submitted against `master`.**
-- `gh-pages` for our hosted site, which includes our analytics tracking code. **Please avoid using this branch.**
-
-
-## Author
-
-**Mark Otto**
-- <https://github.com/mdo>
-- <https://twitter.com/mdo>
-
-
-## License
-
-Open sourced under the [MIT license](LICENSE.md).
-
-<3
+[MIT](http://kopplin.mit-license.org/) License © Sérgio Kopplin
