@@ -1,6 +1,6 @@
 # main text of home
 name: Charlie Blake
-bio: Software developer and occasional comedian
+bio: Software dev, St Andrews alumnus, West Ham fan (and occasional comedian)
 
 # twitter summary info
 description: Somewhere to post my projects and anything else relevant.
@@ -26,15 +26,15 @@ disqus:
   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: myfacebook
+facebook: charlie.blake.58
 #twitter: mytwitter
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
-linkedin: mylinkedin
+linkedin: thecharlesblake/ 
 # youtube: myyoutube
 # spotify: myspotify
-github: mygithub
+github: thecharlesblake/
 # gitlab: mygitlab
 # lastfm: mylastfm
 # stackoverflow: 7044681/mystackoverflow
@@ -48,7 +48,7 @@ email: thecharlesblake@live.co.uk
 authors:
     johndoe:
         name: Charlie Blake
-        bio: Software developer and occasional comedian
+        bio: Software dev, St Andrews alumnus, West Ham fan (and occasional comedian)
         external-image: false
         picture: assets/images/profile.jpg
 
