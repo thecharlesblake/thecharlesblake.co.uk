@@ -86,6 +86,19 @@ show-author: true
 # do you want some animations?
 animation: true
 
+markdown: kramdown
+
+kramdown:
+  parse_block_html: true
+  auto_ids:      true
+  entity_output: as_char
+  toc_levels:    1..6
+  smart_quotes:  lsquo,rsquo,ldquo,rdquo
+  input:         GFM
+  hard_wrap:     false
+  footnote_nr:   1
+  show_warnings: false
+
 plugins:
   - jekyll-seo-tag
   - jekyll-gist

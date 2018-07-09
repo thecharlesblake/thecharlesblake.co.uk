@@ -32,9 +32,11 @@ However, _Blake's Chess_ is quite distinct from these other games and is unlike
 anything I'm currently aware of.
 
 The game is still a work-in-progress. Please forgive any warped game mechanics.
-Feedback is always appreciated :smiley:
+Feedback is always appreciated :)
 
-<div class="breaker"></div>
+<div class="img_container" style="text-align: center;">
+<img src="/assets/images/strategy.png" height="240px"/>
+</div>
 
 ## Requirements
 - A chess set
@@ -54,6 +56,10 @@ Feedback is always appreciated :smiley:
 - After this, a player may instead draw a card (see [Drawing](#drawing))
 - A player may only play cards on their turn, and before their move (see [Playing Cards](#playing-cards))
 
+<div class="img_container" style="text-align: center;">
+<img src="/assets/images/board.png" height="240px"/>
+</div>
+
 ## Capturing
 
 On their turn, if a player wishes to capture an opposing piece, they must first declare their intention to do so. Then each player must roll the dice to help determine their respective _attack_ and _defence_.
@@ -69,6 +75,10 @@ For a defending player, their _defence_ is the sum of their roll, and their _pie
 - __Kings:__ 5
 
 Whichever player's total is higher captures their opponent's piece. Successful attacking pieces move onto the defender's square, whereas successful defending pieces remain in place. In the event of a draw, no capture takes place. Both pieces remain in place and the turn ends.
+
+<div class="img_container" style="text-align: center;">
+<img src="/assets/images/dice.png" height="240px"/>
+</div>
 
 ## Drawing
 
@@ -101,6 +111,10 @@ Note that a card may be played on the same turn it is drawn. Played cards or gro
 - __Jacks:__ Blocks an attack on any other piece
 
 Note that all cards which add to rolled values are to be played _after_ the dice has been rolled.
+
+<div class="img_container" style="text-align: center;">
+<img src="/assets/images/cards.png" height="240px"/>
+</div>
 
 ### Trump Cards
 
