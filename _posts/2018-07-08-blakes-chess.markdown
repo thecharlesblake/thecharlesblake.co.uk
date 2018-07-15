@@ -19,7 +19,7 @@ The following is a set of rules for a game I have invented, which I'm
 provisionally calling _Blake's Chess_ (where's the fun in being a narcissist if
 you don't get to name things after yourself?). This variant is inspired by the
 idea of turning chess into an imperfect-information game, where probability and
-chance are introduced.
+chance must be considered.
 
 The game is really a variant of chess with the attacking dynamics of _Risk_,
 and a set of _effect cards_ as found in many popular board games,
@@ -53,8 +53,9 @@ Feedback is always appreciated :)
   - There is no such thing as _check_. To win, one must capture the opposing king
   - When a piece goes to capture another piece, they must roll to determine whether the capture is successful (see [Capturing](#capturing))
 - For the first 3 turns, only regular moves and captures can be made
-- After this, a player may instead draw a card (see [Drawing](#drawing))
-- A player may only play cards on their turn, and before their move (see [Playing Cards](#playing-cards))
+- After this, a player may draw a card (see [Drawing](#drawing)) instead of a
+  move / capture
+- During the game players may play cards or groups of cards, to activate certain effects (see [Playing Cards](#playing-cards))
 
 <div class="img_container" style="text-align: center;">
 <img src="/assets/images/board.png" height="240px"/>
@@ -82,39 +83,50 @@ Whichever player's total is higher captures their opponent's piece. Successful a
 
 ## Drawing
 
-On their turn a player may draw a single card as an alternative to moving or capturing. Cards may either be drawn from the top of the _stock_ pile or the _waste_ pile (a second face-up pile next to the stock). A drawn card may be held indefinitely in a player's _hand_.
+On their turn a player may draw a single card as an alternative to moving or capturing. Cards may only be drawn from the top of the _stock_ pile, not from the _waste_ pile (a second face-up pile next to the stock). A drawn card may be held indefinitely in a player's _hand_.
 
-However, hands are limited to a maximum of 5 cards. If a player wishes to draw a card when they have reached their maximum hand size, they may do so, but upon drawing must immediately discard a card from their hand (including the one just drawn) and place in on top of the waste pile.
+However, hands are limited to a maximum of 5 cards. If a player wishes to draw a card when they have reached their maximum hand size, they may do so, but upon drawing must immediately discard a card from their hand (including the one just drawn) and place it on top of the waste pile.
 
 If the stock pile is exhausted, the waste must be shuffled, turned over, and becomes the new stock pile.
 
 ## Playing Cards
-Before a player moves or attempts a capture, they may play a card or group of cards from their hand. Certain cards / groups of cards have particular effects on the game. These are broken down into two categories: __poker hands__ and __trump cards__. Poker hands and trump cards may be played in combination, and there is no limit to the number that a player may play on their turn. The effects of a card / group take place once on the turn they are activated.
 
-Note that a card may be played on the same turn it is drawn. Played cards or groups of cards are placed on top of the waste pile in any order once their effect has taken place.
+A player may play a card or groups of cards from their hand during the game if
+that card / group has a designated effect. These plays are to be made on a
+player's turn, _before_ a
+a player moves or attempts a capture, unless stated otherwise. All effects are
+applied once, and do not last beyond their initial application.
 
- The effects of these cards are as follows:
+The card effects are broken down into two categories: __poker hands__ and __trump cards__. Poker hands and
+trump cards may be played in combination, and there is no limit to the number
+that a player may play on their turn.
+
+Note that a card may be played on the same turn it is drawn. Played cards or
+groups of cards are placed on top of the waste pile in any order once their
+effect has taken place.
+
+The effects of these cards are as follows:
+
+<div class="img_container" style="text-align: center;">
+<img src="/assets/images/cards.png" height="240px"/>
+</div>
 
 ### Poker Hands
 
 - __2 pair:__ +1 to any roll
 - __3 of a kind:__ +2 to any roll
 - __4 of a kind:__ +3 to any roll
-- __3 card straight:__ Builds the first knight / bishop / rook (see [Building Peices](#building-pieces))
-- __4 card straight:__ Builds the queen
-- __5 card straight:__ Builds all remaining pieces at once
-- __3 card flush:__  Builds the second knight / bishop / rook
-- __4 card flush:__ Builds the queen
-- __5 card flush:__ Selects any opposing piece (excluding the king) to be removed from play
+- __3 card straight / flush:__ Builds a single piece (see [Building Pieces](#building-pieces))
+- __4 card straight / flush:__ Builds 2 pieces
+- __5 card straight / flush:__ Builds 3 pieces
 - __Kings:__ Blocks an attack on the king
 - __Queens:__ Blocks an attack on the queen
 - __Jacks:__ Blocks an attack on any other piece
 
-Note that all cards which add to rolled values are to be played _after_ the dice has been rolled.
-
-<div class="img_container" style="text-align: center;">
-<img src="/assets/images/cards.png" height="240px"/>
-</div>
+Note that all cards which add to rolled values are to be played _after_ the
+dice has been rolled. Also be aware that a straight flush gives the
+combined effect of the straight and the flush.
+In addition, Kings, Queens and Jacks are to be played on an opponent's turn when they have declared an attack.
 
 ### Trump Cards
 
@@ -134,7 +146,7 @@ selected as the _trump_ card at the beginning of the game.
 - __6 (sniper):__ An attack on an opposing piece, does not move to their square if
   successful. The attacking piece is also not captured if unsuccessful
 - __7 (agility):__ Allows two moves/captures/draws on this turn
-- __8 (bodyguard):__ Swaps a piece that is about to die (excluding the king) with any other piece to take its place
+- __8 (bodyguard):__ Swaps a piece that is about to die (excluding the king) with any other piece to take its place (to be played after an opponent's attack)
 - __9 (tag-team):__ Two pieces may attack at once, combining their piece strength. One piece is
 selected beforehand to move to the target square if successful. Both attacking pieces are captured if
 unsuccessful
@@ -144,15 +156,21 @@ unsuccessful
   either lost or not yet acquired, instead converts that piece into one of your
   own
 - __Q (uprising):__ Swaps the piece strength of the attacking and defending
-  pieces (excluding defending kings)
+  pieces (excluding defending kings. The attack bonus remains the same)
 - __K (necromancy):__ Revives one of your dead pieces
 
 ## Building Pieces
 
-There is an order in which pieces must be built. Firstly, a rook, a knight and a
-bishop must be built (in any order). After these three have been completed, a
-queen must be built. Finally the second rook, knight, and bishop must be built
-(again, in any order).
+Pieces may be built by playing certain groups of cards. There is an order in
+which pieces must be built. This is as follows:
+
+- First knight
+- First bishop
+- First rook
+- Queen
+- Second knight
+- Second bishop
+- Second rook
 
 Pieces may only be built if they have not been built before. Captured pieces may
 not be rebuilt.
